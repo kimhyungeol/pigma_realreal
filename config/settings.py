@@ -192,5 +192,6 @@ SESSION_REDIS={
        'socket_timeot':1,
        'retry_on_timeout': False,
        }
-
+       
+CSRF_TRUSTED_ORIGINS = ['https://www.pigmamusic.com','https://127.0.0.1:8000']
 
