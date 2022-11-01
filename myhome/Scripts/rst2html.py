@@ -1,4 +1,4 @@
-#!c:\users\user\desktop\project-page\myhome\scripts\python.exe
+#!c:\users\vs514\documents\카카오톡 받은 파일\pigma-real\myhome\scripts\python.exe
 
 # $Id: rst2html.py 4564 2006-05-21 20:44:42Z wiemann $
 # Author: David Goodger <goodger@python.org>

@@ -1,4 +1,4 @@
-#!c:\users\user\desktop\project-page\myhome\scripts\python.exe
+#!c:\users\vs514\documents\카카오톡 받은 파일\pigma-real\myhome\scripts\python.exe
 
 # $Id: rst2odt_prepstyles.py 8346 2019-08-26 12:11:32Z milde $
 # Author: Dave Kuhlman <dkuhlman@rexx.com>

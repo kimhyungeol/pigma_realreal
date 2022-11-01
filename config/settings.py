@@ -80,14 +80,15 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
      'default': {
-         #'ENGINE': 'django.db.backends.sqlite3',
-         #'NAME': BASE_DIR / 'db.sqlite3',
-         'ENGINE': 'django.db.backends.mysql',
-         'NAME': 'django_db',
-         'USER': 'django',
-         'PASSWORD': 'admin',
-         'HOST': 'db-1.cspzvo0ks7cl.ap-northeast-2.rds.amazonaws.com',
-         'PORT': '3306'
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'pigma_db',
+        'USER': 'pigma_user',
+        'PASSWORD': 'itbank',
+        'HOST': 'db-1.cspzvo0ks7cl.ap-northeast-2.rds.amazonaws.com',
+        'PORT': '3306',
+        "OPTIONS": {"charset": "utf8mb4"},
      }
  }
 

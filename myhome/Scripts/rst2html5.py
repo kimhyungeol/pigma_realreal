@@ -1,4 +1,4 @@
-#!c:\users\user\desktop\project-page\myhome\scripts\python.exe
+#!c:\users\vs514\documents\카카오톡 받은 파일\pigma-real\myhome\scripts\python.exe
 # -*- coding: utf8 -*-
 # :Copyright: © 2015 Günter Milde.
 # :License: Released under the terms of the `2-Clause BSD license`_, in short:

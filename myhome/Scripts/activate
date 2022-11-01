@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\USER\Desktop\project-page\myhome"
+VIRTUAL_ENV="C:\Users\vs514\Documents\카카오톡 받은 파일\pigma-real\myhome"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

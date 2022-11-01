@@ -1,4 +1,4 @@
-#!c:\users\user\desktop\project-page\myhome\scripts\python.exe
+#!c:\users\vs514\documents\카카오톡 받은 파일\pigma-real\myhome\scripts\python.exe
 
 # Author:
 # Contact: grubert@users.sf.net
