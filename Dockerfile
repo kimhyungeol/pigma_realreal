@@ -7,6 +7,7 @@ COPY requirements.txt ./
 RUN python -m pip install --upgrade pip --user
 RUN pip3 install -r requirements.txt
 
+
 ## Copy all src files
 COPY . .
 

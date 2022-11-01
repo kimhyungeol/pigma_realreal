@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'MTV.apps.MtvConfig',
     'common.apps.CommonConfig',
     'storages',
+    'cacheops',
     
 ]
 
@@ -79,18 +80,15 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-     'default': {
-        #'ENGINE': 'django.db.backends.sqlite3',
-        #'NAME': BASE_DIR / 'db.sqlite3',
+    'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pigma_db',
-        'USER': 'pigma_user',
-        'PASSWORD': 'itbank',
+        'NAME': 'django_db',
+        'USER': 'django',
+        'PASSWORD': 'django',
         'HOST': 'db-1.cspzvo0ks7cl.ap-northeast-2.rds.amazonaws.com',
-        'PORT': '3306',
-        "OPTIONS": {"charset": "utf8mb4"},
-     }
- }
+        'PORT': '3306'
+    }
+}
 
 
 # Password validation
@@ -150,7 +148,10 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_ACCESS_KEY_ID = 'AKIAUHOLGTC7TUSVQZSQ'
 AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'pigmamusic'
+AWS_REGION="ap-northeast-2"
+AWS_S3_CUSTOM_DOMAIN ="%s.s3.%s.amazonaws.com" % (AWS_STORAGE_BUCKET_NAME, AWS_REGION)
 AWS_DEFAULT_ACL='public-read'
+STATIC_URL = 'https://%s/static/' % (AWS_S3_CUSTOM_DOMAIN)
 
 
 
