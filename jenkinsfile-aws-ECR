@@ -4,7 +4,7 @@ node {
      }
 
      stage('Build image') {
-         app = docker.build("Dockerfile")
+         app = docker.build("Dockerfile:0.1.0")
      }
 
      stage('Push image') {
