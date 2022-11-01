@@ -1,19 +1,9 @@
-node {
+ node {
      stage('Clone repository') {
          checkout scm
      }
 
      stage('Build image') {
-         app = docker.build("pigma/0.1.0")
+         app = docker.build("test/jenkins:$BUILD_NUMBER")
      }
-
-     stage('Push image') {
-         sh 'rm  ~/.dockercfg || true'
-         sh 'rm ~/.docker/config.json || true'
-         
-         docker.withRegistry('https://290873317567.dkr.ecr.ap-northeast-2.amazonaws.com', 'ecr:ap-northeast-2:ECR') {
-             app.push("${env.BUILD_NUMBER}")
-             app.push("latest")
-     }
-  }
 }
