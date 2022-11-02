@@ -14,6 +14,22 @@ node {
          docker.withRegistry('https://290873317567.dkr.ecr.ap-northeast-2.amazonaws.com', 'ecr:ap-northeast-2:ECR') {
              app.push("${env.BUILD_NUMBER}")
              app.push("latest")
+          }
      }
-  }
+     stage('SSH docker run') {
+        script {
+            sshPublisher(
+                continueOnError: false, failOnError: true,
+                publishers: [
+                    sshPublisherDesc(
+                        configName: "was2c",
+                        verbose: true,
+                        transfers: [
+                            sshTransfer(execCommand: "./test.sh")
+                        ]
+                    )
+                ]
+            )
+        }
+    }
 }
