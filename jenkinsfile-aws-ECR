@@ -22,10 +22,10 @@ node {
                 continueOnError: false, failOnError: true,
                 publishers: [
                     sshPublisherDesc(
-                        configName: "was2c","was1a",
+                        configName: "was2c",
                         verbose: true,
                         transfers: [
-                            sshTransfer(execCommand: "./test.sh")
+                            sshTransfer(execCommand: "./build.sh")
                         ]
                     )
                 ]
