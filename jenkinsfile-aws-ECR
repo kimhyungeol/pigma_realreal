@@ -16,7 +16,23 @@ node {
              app.push("latest")
           }
      }
-     stage('SSH docker run') {
+     stage('SSH docker run was1a') {
+        script {
+            sshPublisher(
+                continueOnError: false, failOnError: true,
+                publishers: [
+                    sshPublisherDesc(
+                        configName: "was1a",
+                        verbose: true,
+                        transfers: [
+                            sshTransfer(execCommand: "./build.sh")
+                        ]
+                    )
+                ]
+            )
+        }
+    }
+    stage('SSH docker run was2c') {
         script {
             sshPublisher(
                 continueOnError: false, failOnError: true,
