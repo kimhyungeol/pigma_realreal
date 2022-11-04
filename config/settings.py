@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'MTV.apps.MtvConfig',
     'common.apps.CommonConfig',
     'storages',
-    #'cacheops',
+    'cacheops',
     
 ]
 
@@ -167,7 +167,7 @@ CACHEOPS_DEFAULTS = {
 
 
 REDIS_HOST = "redis-cluster.l0azzo.ng.0001.apn2.cache.amazonaws.com"
-'''
+
 CACHEOPS_REDIS = {
         'host' : REDIS_HOST,
         'port' : 6379,
@@ -180,7 +180,7 @@ CACHEOPS = {
             'common.*': {},
 
             }
-'''
+
 SESSION_ENGINE= 'redis_sessions.session'
 SESSION_EXPIRE_SECONDS = 120
 SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
