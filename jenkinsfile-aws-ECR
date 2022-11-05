@@ -11,6 +11,7 @@ node {
                         configName: "was1a",
                         verbose: true,
                         transfers: [
+                            sshTransfer(execCommand: "sudo chmod +x build.sh"),
                             sshTransfer(execCommand: "./build.sh")
                         ]
                     )
@@ -27,7 +28,7 @@ node {
                         configName: "was2c",
                         verbose: true,
                         transfers: [
-                            sshTransfer(execCommand: "sudo chmod +x build.sh")
+                            sshTransfer(execCommand: "sudo chmod +x build.sh"),
                             sshTransfer(execCommand: "./build.sh")
                         ]
                     )
