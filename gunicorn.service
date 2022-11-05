@@ -5,7 +5,7 @@ After=network.target
 [Service]
 User=ec2-user
 Group=ec2-user
-WorkingDirectory=/home/ec2-user/workhome/pigma_realreal
+WorkingDirectory=/home/ec2-user/pigma_realreal
 ExecStart=/home/ec2-user/.local/bin/gunicorn \
         --workers 3 \
         --bind 0.0.0.0:8000 config.wsgi:application
